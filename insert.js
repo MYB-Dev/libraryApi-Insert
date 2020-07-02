@@ -5,6 +5,7 @@ var app = new Vue({
     author: '',
     isbn: '',
     loading: false,
+    available: true,
     books: [],
   },
   methods: {
@@ -13,6 +14,7 @@ var app = new Vue({
         title: this.title,
         author: this.author,
         isbn: this.isbn,
+        available: this.available,
       };
       fetch('https://myb-library-api.herokuapp.com/api/books', {
         method: 'POST', // or 'PUT'
